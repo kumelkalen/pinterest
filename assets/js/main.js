@@ -7,7 +7,7 @@ $(document).ready(function(){
 		var descripcion = dato.description;
 		var usuario = dato.user;
 		var hashtag = dato.hashtag;
-	}
-	$(".cont-pin").append("")
+	
+	$(".cont-pin").append('<div class="pin"><div class="img-pin"><img src="dist/img/'+imagen+'" alt=""></div><div class="text-pin"><h2>'+titulo+'</h2><br/><p>'+descripcion+'</p><br/><h4>'+usuario+'</h4><h5>'+hashtag+'</h5></div></div>');
+	});
 });
-
