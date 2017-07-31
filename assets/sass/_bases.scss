@@ -1,0 +1,28 @@
+header{
+	.menu{
+		.logo{
+			.icon{
+				width: 50%;
+			}
+		}
+		.buscador{
+			input{
+
+			}
+		}
+		.despliegue{
+			span{
+				font-size: 12px;
+			}
+		}
+		.user{
+			display: inline-block;
+			img{
+				width: 15px;
+			}
+			span{
+				font-size: 13px;
+			}
+		}
+	}
+}
