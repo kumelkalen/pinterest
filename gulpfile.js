@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var webserver = require('gulp-webserver');
-var watch = require('gulp-watch');
+
 //Tareas
 gulp.task('script',function(){
 	gulp.src(['node_modules/jquery/dist/jquery.js','assets/js/*.js'])
@@ -15,9 +15,9 @@ gulp.task('script',function(){
 //mini css
 gulp.task('style',function(){
 	gulp.src(['assets/sass/main.scss'])
-		.pipe(sass().on('error', sas.logError))
-		.pipe(minifyCSS());
-		.pipe(concat('style.min.css'));
+		.pipe(sass().on('error', sass.logError))
+		.pipe(minifyCSS())
+		.pipe(concat('style.min.css'))
 		//carpeta
 		.pipe(gulp.dest('dist/css/'));
 });
@@ -31,5 +31,9 @@ gulp.task('webserver', function(){
 		open: true
 		}));
 });
+//seguimiento archivos scss
+gulp.task('watch', function() {
+    gulp.watch('assets/scss/*.scss', ['style']);
+});
 // tareas a ejecutar
-gulp.task('default', ['script','style','webserver']);
+gulp.task('default', ['script','style','webserver','watch']);
