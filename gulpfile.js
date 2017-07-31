@@ -25,15 +25,15 @@ gulp.task('style',function(){
 gulp.task('webserver', function(){
 	gulp.src('../pinterest/')
 		.pipe(webserver({
-		fallback: 'index.html',
-		livereload: true,
-		directoryListening: false,
-		open: true
+			fallback: 'index.html',
+			livereload: true,
+			directoryListening: false,
+			open: true
 		}));
 });
 //seguimiento archivos scss
 gulp.task('watch', function() {
-    gulp.watch('assets/scss/*.scss', ['style']);
+    gulp.watch('assets/sass/*.scss', ['style']);
 });
 // tareas a ejecutar
 gulp.task('default', ['script','style','webserver','watch']);
