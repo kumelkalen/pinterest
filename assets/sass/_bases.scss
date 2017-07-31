@@ -28,26 +28,35 @@ header{
 	}
 	.links{
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+		a{
+			text-decoration: none;
+			color: white;
+			padding: 20px;
+			border-radius: 10px;
+			background: url("http://lorempixel.com/200/200/abstract/");
+		}
 	}
 }
 section{
 	.cont-pin{
-		column-width: 350px;
-		max-width: 1100px;
 		margin: 50px auto;
 		.pin{
 			border: 2px solid #fcfcfc;
 			box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-			margin: 0 2px 15px;
+			margin: 0 19px 15px;
 			padding: 15px;
 			padding-bottom: 10px;
 			transition: opacity .4s ease-in-out;
+			border-radius: 10px;
+		&:hover{
+			opacity: 0.4;
+		}
 			.img-pin{
 				img{
 					width: 100%; height: auto;
 					border-bottom: 1px solid #ccc;
-					padding-bottom: 15px;
+					border-radius: 10px;
 					margin-bottom: 5px;
 				}
 			}
