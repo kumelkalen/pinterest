@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.templateRow{
+	content: " ";
+	display: table;
+}
+.row{
+	&:before{
+		@extend .templateRow;
+	}
+	&:after{
+		@extend .templateRow;
+		clear: both;
+	}
+}
+[class*="col-"]{
+	min-height: 7px;
+	padding: 12px;
+	float: left;
+}
+@function anchoDeColumnas($i){
+	@return percentage(($i/12));
+	
+}
+
+@for $i from 1 through 12{
+	.col-#{$i}{
+		width: anchoDeColumnas($i);
+	}
+}
