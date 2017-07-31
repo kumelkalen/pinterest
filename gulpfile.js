@@ -6,6 +6,7 @@ var minifyCSS = require('gulp-minify-css');
 var webserver = require('gulp-webserver');
 
 //Tareas
+//mini js
 gulp.task('script',function(){
 	gulp.src(['node_modules/jquery/dist/jquery.js','assets/js/*.js'])
 		.pipe(concat('script.js'))
